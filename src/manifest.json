@@ -1,0 +1,34 @@
+{
+    "name": "Wakooped!",
+    "version": "1.0",
+    "description": "Do you want to make a joke to any of your jobmates? This extension will replace all the images in a website by random Wakoopa members pictures",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/main.js"
+            ]
+        }
+    ],
+    "background": {
+        "page": "html/background.html"
+    },
+    "permissions": [
+        "<all_urls>",
+        "nativeMessaging",
+        "tabs",
+        "webNavigation"
+    ],
+    "web_accessible_resources": [
+        "img/*",
+        "js/*"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 2
+}
