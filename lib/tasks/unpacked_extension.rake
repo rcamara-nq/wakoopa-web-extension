@@ -18,7 +18,8 @@ namespace :compile do
 
     build_dir = create_build_root args[:browser], false
 
-    compile_chrome(build_dir) if args[:browser] == 'chrome'
+    compile_zip(build_dir, args[:browser]) if args[:browser] == 'chrome'
+    compile_zip(build_dir, args[:browser]) if args[:browser] == 'firefox'
   end
 end
 
@@ -49,6 +50,6 @@ def cleanup_js_folder(root)
   FileUtils.rm_rf File.join(root, 'js', 'content')
 end
 
-def compile_chrome(root)
-  Extensionator.zip(root, File.join(root, 'chrome.zip'))
+def compile_zip(root, browser)
+  Extensionator.zip(root, File.join(root, "#{browser}.zip"))
 end
