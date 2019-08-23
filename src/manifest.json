@@ -1,7 +1,7 @@
 {
     "name": "Wakooped!",
     "version": "1.0",
-    "description": "Do you want to make a joke to any of your jobmates? This extension will replace all the images in a website by random Wakoopa members pictures",
+    "description": "Do you want to make a joke to any of your coworkers? This extension will replace all the images in a website by random Wakoopa members pictures",
     "content_scripts": [
         {
             "matches": [
