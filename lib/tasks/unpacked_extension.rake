@@ -15,9 +15,7 @@ namespace :compile do
 
   task :packed, [:browser] do |_task, args|
     Rake.application.invoke_task("compile:unpacked[#{args[:browser]}]")
-
     build_dir = create_build_root args[:browser], false
-
     compile_zip(build_dir, args[:browser]) if args[:browser] == 'chrome'
     compile_zip(build_dir, args[:browser]) if args[:browser] == 'firefox'
   end
