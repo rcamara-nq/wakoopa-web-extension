@@ -1,12 +1,13 @@
 GEM
+  remote: https://rubygems.org/
   specs:
-    extensionator (1.1.10)
-      rubyzip (= 1.2.0)
-      slop (~> 4.2)
-    os (0.9.6)
-    rake (12.2.1)
-    rubyzip (1.2.0)
-    slop (4.6.0)
+    extensionator (2.1.5)
+      rubyzip (= 1.2.2)
+      slop (~> 4.4)
+    os (1.0.1)
+    rake (12.3.3)
+    rubyzip (1.2.2)
+    slop (4.7.0)
 
 PLATFORMS
   ruby
