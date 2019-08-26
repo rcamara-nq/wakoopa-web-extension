@@ -18,3 +18,15 @@ API.tabsOnUpdated(function (tabId, changeInfo, tab) {
         "message": "completed"
     });
 });
+
+API.onMessage((request, sender, sendResponse) => {
+    if (request.save) {
+        API.set('semaphore', request.save, null);
+    }
+
+    if (request.get) {
+        API.get('semaphore', sendResponse);
+    }
+
+    return true;
+});

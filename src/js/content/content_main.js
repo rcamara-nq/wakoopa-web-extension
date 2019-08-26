@@ -1,10 +1,14 @@
 import API from './../browser.js'
 import Wakoopa from './wakoopa.js'
 
-function main() {
-    API.onMessage((request, sender, sendResponse) => {
-        Wakoopa.wakooped();
-    })
-}
+API.onMessage((request, sender, sendResponse) => {
+    if (request.message) {
+        API.get('semaphore', function (result) {
+            if (result.semaphore && result.semaphore) {
+                Wakoopa.wakooped();
+            }
+        })
+    }
 
-main();
+    return true;
+});
